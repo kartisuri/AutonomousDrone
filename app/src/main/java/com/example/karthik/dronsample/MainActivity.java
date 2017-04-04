@@ -1,6 +1,10 @@
 package com.example.karthik.dronsample;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.AsyncTask;
+import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,7 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import okhttp3.Call;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -32,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
     Button leftButton;
     Button rightButton;
     Button captureButton;
-    String url;
+    Button sensorBtn;
+    ToggleButton takeOffToggleButton;
+    static String url;
+    private static final int REQUEST_CODE = 1234;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,28 +62,33 @@ public class MainActivity extends AppCompatActivity {
         leftButton = (Button) findViewById(R.id.btnLeft);
         rightButton = (Button) findViewById(R.id.btnRight);
         captureButton = (Button) findViewById(R.id.btnCapture);
-        url = "http://192.168.43.53:8080/hello";
-        micButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                String json, message;
-                json = "{'commandType':'MIC'}";
-                message = "Connection Successful";
-                Toast.makeText(getBaseContext(), "Voice Commands Not Incorporated!",
-                        Toast.LENGTH_SHORT).show();
-                String[] myParams = {url, json, message};
-                //new PostResponseToServer().execute(myParams);
-                new GetResponseFromServer().execute(myParams);
-            }
-        });
+        takeOffToggleButton = (ToggleButton) findViewById(R.id.tbtnTakeOff);
+        sensorBtn = (Button) findViewById(R.id.sensor);
+        // Disable button if no voice recognition service is present
+        PackageManager pm = getPackageManager();
+        List<ResolveInfo> activities = pm.queryIntentActivities(
+                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+        if (activities.size() == 0)
+        {
+            micButton.setEnabled(false);
+            micButton.setText("Recognizer not present");
+        }
+
+        url = getIntent().getStringExtra("URL");
+        Log.v("url main recv", url);
+
         homeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String json, message;
-                json = "{'commandType': 'RETURN'}";
-                message = "Returning Home";
-                String[] myParams = {url, json, message};
-                new PostResponseToServer().execute(myParams);
+                Intent toMap = new Intent (getApplicationContext(), MapsActivity.class);
+                startActivity(toMap);
+            }
+        });
+        sensorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSensor = new Intent (getApplicationContext(), TiltActivity.class);
+                startActivity(toSensor);
             }
         });
         armToggleButton.setOnClickListener(new View.OnClickListener(){
@@ -80,18 +96,33 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 String json, message;
                 if (armToggleButton.isChecked()) {
-                    json = "{'commandType': 'ARM'}";
+                    json = "{\"ACTION\" : \"arm\", \"MAP\":\"\"}";
                     message = "Drone Armed";
                 } else {
-                    json = "{'commandType': 'DISARM'}";
+                    json = "{\"ACTION\" : \"disarm\", \"MAP\":\"\"}";
                     message = "Drone Disarmed";
                 }
                 String[] myParams = {url, json, message};
                 new PostResponseToServer().execute(myParams);
             }
         });
+        takeOffToggleButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String json, message;
+                if (takeOffToggleButton.isChecked()) {
+                    json = "{\"ACTION\" : \"autoTakeOff\", \"MAP\":\"\"}";
+                    message = "Auto Take off initiated";
+                } else {
+                    json = "{\"ACTION\" : \"autoLand\", \"MAP\":\"\"}";
+                    message = "Auto Landing initiated";
+                }
+                String[] myParams = {url, json, message};
+                new PostResponseToServer().execute(myParams);
+            }
+        });
         droneUpButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVEUP'}";
+            String json = "{\"ACTION\" : \"up\", \"MAP\":\"\"}";
             String message = "Drone Move Up";
             String[] myParams = {url, json, message};
             @Override
@@ -101,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         droneDownButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVEDOWN'}";
+            String json = "{\"ACTION\" : \"down\", \"MAP\":\"\"}";
             String message = "Drone Move Down";
             String[] myParams = {url, json, message};
             @Override
@@ -111,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         droneLeftButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'TURNLEFT'}";
+            String json = "{\"ACTION\" : \"turn left\", \"MAP\":\"\"}";
             String message = "Drone Turn Left";
             String[] myParams = {url, json, message};
             @Override
@@ -121,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         droneRightButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'TURNRIGHT'}";
+            String json = "{\"ACTION\" : \"turn right\", \"MAP\":\"\"}";
             String message = "Drone Turn Right";
             String[] myParams = {url, json, message};
             @Override
@@ -131,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         forwardButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVEFORWARD'}";
+            String json = "{\"ACTION\" : \"forward\", \"MAP\":\"\"}";
             String message = "Drone Move Forward";
             String[] myParams = {url, json, message};
             @Override
@@ -141,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         reverseButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVEREVERSE'}";
+            String json = "{\"ACTION\" : \"reverse\", \"MAP\":\"\"}";
             String message = "Drone Move Reverse";
             String[] myParams = {url, json, message};
             @Override
@@ -151,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         leftButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVELEFT'}";
-            String message = "Drone Move Left";
+            String json = "{\"ACTION\" : \"roll left\", \"MAP\":\"\"}";
+            String message = "Drone Roll Left";
             String[] myParams = {url, json, message};
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -161,8 +192,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rightButton.setOnTouchListener(new View.OnTouchListener() {
-            String json = "{'commandType': 'MOVERIGHT'}";
-            String message = "Drone Move Right";
+            String json = "{\"ACTION\" : \"roll right\", \"MAP\":\"\"}";
+            String message = "Drone Roll Right";
             String[] myParams = {url, json, message};
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -173,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         videoRecButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String json = "{'commandType': 'VIDEOREC'}";
+                String json = "{\"ACTION\" : \"video\", \"MAP\":\"\"}";
                 String message = "Video Record";
                 String[] myParams = {url, json, message};
                 new PostResponseToServer().execute(myParams);
@@ -182,12 +213,40 @@ public class MainActivity extends AppCompatActivity {
         captureButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String json = "{'commandType': 'CAPTURE'}";
-                String message = "Image Capture";
+                String json = "{\"ACTION\" : \"picture\", \"MAP\":\"\"}";
+                String message = "Image Captured";
                 String[] myParams = {url, json, message};
                 new PostResponseToServer().execute(myParams);
             }
         });
+    }
+    public void micButtonClicked(View v){
+        startVoiceRecognitionActivity();
+    }
+    private void startVoiceRecognitionActivity() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Listening...");
+        startActivityForResult(intent, REQUEST_CODE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK)
+        {
+            // Populate the String values the recognition engine thought it heard
+            ArrayList<String> matches = data.getStringArrayListExtra(
+                    RecognizerIntent.EXTRA_RESULTS);
+            String word = matches.get(0);
+            Toast.makeText(getBaseContext(), word, Toast.LENGTH_SHORT).show();
+            word = word.concat("\"}");
+            String json = "{\"ACTION\" : \"".concat(word);
+            String message = "Sending voice command";
+            String[] myParams = {url, json, message};
+            new PostResponseToServer().execute(myParams);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
     public class GetResponseFromServer extends AsyncTask<String, Void, Void> {
         protected Void doInBackground(String...params){
@@ -213,9 +272,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                Log.v("Response", response.toString());
+                                Log.v("Response", response.body().string());
                                 if (response != null) {
-                                   Toast.makeText(getBaseContext(),response.toString(),Toast.LENGTH_LONG).show();
                                    Toast.makeText(getBaseContext(), message,Toast.LENGTH_LONG).show();
                                 }
                             } catch (Exception e) {
@@ -228,8 +286,8 @@ public class MainActivity extends AppCompatActivity {
         return null;
         }
     }
-    private class PostResponseToServer extends AsyncTask<String, Void, Void> {
-        protected Void doInBackground(String...params){
+    public class PostResponseToServer extends AsyncTask<String, Void, Boolean> {
+        protected Boolean doInBackground(String...params){
             final String url, json, message;
             url = params[0];
             json = params[1];
@@ -238,6 +296,7 @@ public class MainActivity extends AppCompatActivity {
             OkHttpClient client = new OkHttpClient();
             RequestBody body = RequestBody.create(JSON, json);
             Request request = new Request.Builder()
+                        .header("X-Client-Type", "Android")
                         .url(url)
                         .post(body)
                         .build();
@@ -247,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(getBaseContext(), "Network Fail", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), "Network Fail", Toast.LENGTH_LONG).show();
                         }
                     });
                 }
@@ -257,10 +316,9 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                Log.v("Response", response.toString());
                                 if (response != null) {
-                                    Toast.makeText(getBaseContext(),response.toString(),Toast.LENGTH_LONG).show();
-                                    Toast.makeText(getBaseContext(), message,Toast.LENGTH_LONG).show();
+                                    Log.v("Response body", response.body().string());
+                                    Toast.makeText(getBaseContext(), message,Toast.LENGTH_SHORT).show();
                                 }
                             } catch (Exception e) {
                                 e.printStackTrace();

@@ -3,138 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Karthik\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jar="C:\Users\Karthik\.android\build-cache\e8528287f7d16262754c12a01015756dbca0e3f7\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.4.1_0d692f396cc40a2a07019f964cbf64d5087bce6c\classes.dex" />
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d7bb876c290b4376e3ddb416ca7066dad460380f\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\4efa67db4b985f56995f9821b0ff3c484d525b36\output\jars\classes.jar"
+        jar="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bd37fe1b23bc3b5136acd9594b131c49446d8308\classes.dex" />
+        sha1="24a44bc572ab5010e555e6dc424ac290daad721c">
+        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3a512536950c69c2e1b910790c6aa9d86859f225\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Karthik\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.1_d8a0bacd28ccd23d4f360f6c770b0ac06a759455\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\0fc636117b6620df38e0b7c8904deb56b126db28\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dddfd01cb753deec7fac66dc78d00c2355132b64\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="eb2ce0b2512253ace7869d556f13f5216abcdafd">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_fc5254945fee767aae8b44b6acaa5d43b89f083f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.9.0_5d4ed002a5651b1ce69869fb4d40de8a43078049\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\7e6ce5692dbecbeb1c84dbd9db7c0906bcb9ae4d\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1f6499401e4c18591ce0bcce3dbf6a3e300dcf31\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\efec43e9548068aaca0b361fc119f4a815b91aa6\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2495f7406d764867e141af7530e00f87dda976e1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\73a1bb1a4002e9fc568469dc5e1799729fc0fdea\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a96a7e747fce879696de6bbc0032eec13433ae9a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\cf9e4a9c9cc1ea894fdc5ea981f6aafe3cab98da\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_aac73cf021fe237a45104938a744f237e1001910\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c8efd6f8cb67276ca199ef03a8fabc088e441365\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\fc5aff86f6abd4b28772ff0b6eb32a802691f84f\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_08bdf0c4006ef68c592ca0218a79bf70749e5ef0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\30f70c3b2ed471856b521429b0d35cfbce3528c7\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_139a848f5e2e54a40eabf349171d416e1ec2771c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_8961080cb100efc99f437e60d76a81dc7b3255f4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\Karthik\AndroidStudioProjects\Dronsample\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ba160f2ec73cb8d16dd147886f97e3195428e08a\classes.dex" />
+        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3734c1c757d28884ebc68e2686c4f64885a40939\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Karthik\.android\build-cache\e8528287f7d16262754c12a01015756dbca0e3f7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\pre-dexed\debug\classes_d7bb876c290b4376e3ddb416ca7066dad460380f.jar" />
     </item>
 
 </items>

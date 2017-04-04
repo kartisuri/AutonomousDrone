@@ -1,82 +1,102 @@
 [
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_primary_text_material_light.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_btn_checkable.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\wallet_primary_text_holo_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\39d5547f457471176cc9e27aebc911d8d88e9b0f\\output\\res\\color\\wallet_primary_text_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_primary_text_material_dark.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_default.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_spinner.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_hint_foreground_material_light.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\1177b27f5c2d22d03ea5f7fb369e92b8fa598c87\\output\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_secondary_text_material_light.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_secondary_text_material_dark.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_search_url_text.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\switch_thumb_material_dark.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_switch_thumb.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_spinner.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_seek_thumb.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\1177b27f5c2d22d03ea5f7fb369e92b8fa598c87\\output\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_search_url_text.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\1177b27f5c2d22d03ea5f7fb369e92b8fa598c87\\output\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_switch_track.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\switch_thumb_material_light.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_btn_colored_text_material.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\color\\abc_tint_edittext.xml"
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\wallet_secondary_text_holo_dark.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\39d5547f457471176cc9e27aebc911d8d88e9b0f\\output\\res\\color\\wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\color\\abc_tint_default.xml"
     }
 ]

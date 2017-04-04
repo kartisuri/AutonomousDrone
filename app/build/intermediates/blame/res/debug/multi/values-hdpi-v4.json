@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "outputFile": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "C:\\Users\\Karthik\\.android\\build-cache\\4f809eb0b4cb1e35c916bfd2b27121753e0ea9ad\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "file": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

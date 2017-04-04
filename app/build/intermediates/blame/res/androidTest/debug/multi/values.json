@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Karthik\\AndroidStudioProjects\\Dronsample\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\Karthik\\.android\\build-cache\\f96afe8d36f5a2931d4eea84ada8f52a4a84e1e0\\output\\res\\values\\values.xml",
+                    "file": "C:\\Users\\Karthik\\.android\\build-cache\\bb3004741b5dbf8395e9cf21fea8cb655dc0c890\\output\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
