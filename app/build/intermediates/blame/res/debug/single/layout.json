@@ -92,6 +92,10 @@
         "source": "C:\\Users\\Karthik\\.android\\build-cache\\66f178e910aa6e8158cac815a50510a795413090\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\altitude_coordinates_popup.xml",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\src\\main\\res\\layout\\altitude_coordinates_popup.xml"
+    },
+    {
         "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_chooser_list_item.xml",
         "source": "C:\\Users\\Karthik\\.android\\build-cache\\3a88d795c80b97a6fc3c44cf388f95fb73f615cf\\output\\res\\layout\\mr_chooser_list_item.xml"
     },

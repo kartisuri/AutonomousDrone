@@ -1,4 +1,4 @@
-#Mon Apr 03 15:47:28 SGT 2017
+#Fri Apr 07 00:40:11 SGT 2017
 base.0=C\:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_3a512536950c69c2e1b910790c6aa9d86859f225
 renamed.1=classes2.dex
 renamed.0=classes.dex

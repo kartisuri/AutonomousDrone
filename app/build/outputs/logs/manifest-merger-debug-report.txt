@@ -126,7 +126,7 @@ MERGED from [com.android.support:support-compat:25.1.0] C:\Users\Karthik\.androi
 	android:allowBackup
 		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:15:9-39
 	android:theme
 		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:18:9-40
 	android:name
@@ -140,7 +140,7 @@ ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\Androi
 activity#com.example.karthik.dronsample.ConnectActivity
 ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:24:9-29:20
 	android:screenOrientation
-		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:24:51-87
+		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:24:51-88
 	android:name
 		ADDED from C:\Users\Karthik\Documents\smartdrone2017\android\app\src\main\AndroidManifest.xml:24:19-50
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -245,7 +245,7 @@ MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\Karthik\.
 MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\Karthik\.android\build-cache\8d2dda43e018787250c4ede60ab7c4b87322c6ee\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\Karthik\.android\build-cache\3b288f10eb4af890ffc0ae7b4b65288ee9c553e2\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.1.0] C:\Users\Karthik\.android\build-cache\b3d19d93118870e8a27007ad451426ad78d5ca86\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:multidex:1.0.1] C:\Users\Karthik\.android\build-cache\1464ce48390652edeb813e4b683ab540a7599661\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\Karthik\.android\build-cache\e8528287f7d16262754c12a01015756dbca0e3f7\output\AndroidManifest.xml:18:5-42
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.1.0] C:\Users\Karthik\.android\build-cache\66f178e910aa6e8158cac815a50510a795413090\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

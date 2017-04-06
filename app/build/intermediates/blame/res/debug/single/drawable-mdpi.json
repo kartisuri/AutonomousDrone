@@ -1,15 +1,47 @@
 [
     {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_keyboard_arrow_right_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_arrow_right_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_down.png",
         "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_down.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_keyboard_arrow_up_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_arrow_up_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_keyboard_voice_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_voice_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_photo_camera_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_photo_camera_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_map_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_map_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_ondemand_video_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_ondemand_video_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_back.png",
         "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_back.png"
     },
     {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_keyboard_arrow_left_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_arrow_left_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_left.png",
         "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_left.png"
+    },
+    {
+        "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_keyboard_arrow_down_black_24dp.png",
+        "source": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_arrow_down_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Karthik\\Documents\\smartdrone2017\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_right.png",

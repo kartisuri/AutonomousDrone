@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Karthik\.android\build-cache\e8528287f7d16262754c12a01015756dbca0e3f7\output\jars\classes.jar"
+        jar="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
-        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d7bb876c290b4376e3ddb416ca7066dad460380f\classes.dex" />
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3734c1c757d28884ebc68e2686c4f64885a40939\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -16,26 +16,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="24a44bc572ab5010e555e6dc424ac290daad721c">
+        sha1="2c5cf99fa1a9379f2861366a084341ad9277d023">
         <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3a512536950c69c2e1b910790c6aa9d86859f225\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3734c1c757d28884ebc68e2686c4f64885a40939\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Karthik\.android\build-cache\e8528287f7d16262754c12a01015756dbca0e3f7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
-        <dex dex="C:\Users\Karthik\Documents\smartdrone2017\android\app\build\intermediates\pre-dexed\debug\classes_d7bb876c290b4376e3ddb416ca7066dad460380f.jar" />
     </item>
 
 </items>

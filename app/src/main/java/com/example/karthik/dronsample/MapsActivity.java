@@ -2,19 +2,20 @@ package com.example.karthik.dronsample;
 
 import android.Manifest;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
-import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -35,31 +36,28 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
+    ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     private GoogleMap mMap;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
     ArrayList<LatLng> markerPoints;
-    private Button submitBtn;
-    final Context context = this;
+    Button submitBtn;
+    Marker marker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,41 +69,75 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        markDronePosition();
         submitBtn = (Button) findViewById(R.id.btn_map);
-
         submitBtn.setOnClickListener(new View.OnClickListener() {
-
-            /*String json = "{\"ACTION\":\"\", \"MAP\":";
-            String message = "Coordinates sent";
-            String[] myParams = {MainActivity.url, json, message};
             @Override
             public void onClick(View v) {
-                new PostResponseToServer().execute(myParams);
-                finish();
-            }*/
-
-            @Override
-            public void onClick(View arg0) {
-
-                final Dialog dialog = new Dialog(context);
+                final Dialog dialog = new Dialog(MapsActivity.this);
                 dialog.setContentView(R.layout.altitude_coordinates_popup);
+                final EditText droneAlt = (EditText) dialog.findViewById(R.id.droneAlt);
                 Button dialogButton = (Button) dialog.findViewById(R.id.btn_ok);
-
                 dialogButton.setOnClickListener(new View.OnClickListener() {
-                    String json = "{\"ACTION\":\"\", \"MAP\":";
-                    String message = "Coordinates sent";
-                    String[] myParams = {MainActivity.url, json, message};
                     @Override
                     public void onClick(View v) {
+                        JSONObject json = ConnectActivity.getJSONObject("ACTION", "goWayPoint");
+                        try {
+                            json.put("MAP", getLatLongJSONArray());
+                            json.put("ALTITUDE", getAltitudeJSONArray());
+                            json.put("DRONEALTITUDE", droneAlt.getText().toString());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        Log.v("COORDINATES", json.toString());
+                        String message = "Coordinates sent";
+                        POST(json.toString(), message);
                         dialog.dismiss();
-                        new PostResponseToServer().execute(myParams);
-                        finish();
-
                     }
                 });
                 dialog.show();
             }
         });
+    }
+
+    private void markDronePosition(){
+        scheduler.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                String response;
+                JSONObject json = ConnectActivity.getJSONObject("ACTION", "getLocation");
+                response = POST(json.toString(), null);
+                JSONObject jsonResponse;
+                try {
+                    jsonResponse = new JSONObject(response);
+                    Log.v("JSONResponse", jsonResponse.get("POSITION").toString());
+                    LatLng location = stringToLatLong(jsonResponse.get("POSITION").toString());
+                    final MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.position(location);
+                    markerOptions.title("Drone");
+                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (marker != null) {
+                                marker.remove();
+                            }
+                            marker = mMap.addMarker(markerOptions);
+                        }
+                    });
+                } catch (Exception e) {
+                    Toast.makeText(MapsActivity.this, "Exception", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+        }, 0, 4, TimeUnit.SECONDS);
+    }
+
+    private LatLng stringToLatLong(String latLong){
+        String[] latLng = latLong.split(",");
+        double latitude = Double.parseDouble(latLng[0]);
+        double longitude = Double.parseDouble(latLng[1]);
+        return new LatLng(latitude, longitude);
     }
 
     @Override
@@ -126,7 +158,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        markerPoints = new ArrayList<LatLng>();
+        markerPoints = new ArrayList<>();
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng point) {
@@ -137,6 +169,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 markerPoints.add(point);
                 MarkerOptions options = new MarkerOptions();
                 options.position(point);
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(21));
                 if (markerPoints.size() == 1) {
                     options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
                 } else if (markerPoints.size() > 2) {
@@ -144,7 +177,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 drawPolyLineOnMap(markerPoints);
                 mMap.addMarker(options);
-                Log.v("marker latlong", point.toString());
             }
         });
 
@@ -162,7 +194,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         polyOptions.color(Color.RED);
         polyOptions.width(8);
         polyOptions.addAll(list);
-        //mMap.clear();
         mMap.addPolyline(polyOptions);
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         for (LatLng latLng : list) {
@@ -173,7 +204,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 100);
         mMap.animateCamera(cu);
     }
-
 
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -215,7 +245,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mCurrLocationMarker = mMap.addMarker(markerOptions);
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(20));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(21));
         //stop location updates
         if (mGoogleApiClient != null) {
             LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
@@ -223,9 +253,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {}
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {}
 
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     public boolean checkLocationPermission(){
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
@@ -248,7 +277,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 if (grantResults.length > 0
@@ -264,60 +294,70 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 } else {
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
-                return;
             }
         }
     }
 
-    public class PostResponseToServer extends AsyncTask<String, Void, Void> {
-        protected Void doInBackground(String...params){
-            final String url, json, message;
-            url = params[0];
-            JSONArray latLongList = new JSONArray();
-            for (LatLng latlng:markerPoints){
-                latLongList.put("("+String.valueOf(latlng.latitude)+
-                        ","+String.valueOf(latlng.longitude)+")");
+    private String POST(String json, String message){
+        String response = null;
+        String[] myParams = {MainActivity.url, json};
+        try {
+            response = new PostResponseToServer().execute(myParams).get();
+        } catch (Exception e) {e.printStackTrace();}
+        if (message != null) {
+            if (response != null) {
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Network Failure", Toast.LENGTH_SHORT).show();
             }
-            Log.v("marker post", latLongList.toString());
-            json = params[1] + latLongList.toString() + "}";
-            message = params[2];
-            final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-            OkHttpClient client = new OkHttpClient();
-            RequestBody body = RequestBody.create(JSON, json);
-            Request request = new Request.Builder()
-                    .header("X-Client-Type", "Android")
-                    .url(url)
-                    .post(body)
-                    .build();
-            client.newCall(request).enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, final IOException e) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getBaseContext(), "Network Fail", Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-                @Override
-                public void onResponse(Call call, final Response response) throws IOException {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                if (response != null) {
-                                    Log.v("Response body", response.body().string());
-                                    Toast.makeText(getBaseContext(), message,Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                }
-            });
-            return null;
         }
+        return response;
+    }
+
+    private String getLatLongJSONArray(){
+        JSONArray latLongArray = new JSONArray();
+        for (LatLng latLong : markerPoints){
+            latLongArray.put("(" + String.valueOf(latLong.latitude) + "," +
+                    String.valueOf(latLong.longitude) + ")");
+            }
+        return latLongArray.toString();
+    }
+
+    private String getAltitudeJSONArray() throws Exception {
+        JSONArray altitudeArray = new JSONArray();
+        for (LatLng latLong : markerPoints){
+            String altitudeUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=" +
+                    String.valueOf(latLong.latitude) + "," + String.valueOf(latLong.longitude) +
+                    "&key=AIzaSyAhqtoCwD_0ZBiB7caWjQe2tX1XML-TNTo&sensor=true";
+            String[] myParams = {altitudeUrl};
+            String response = new GetResponseFromServer().execute(myParams).get();
+            JSONObject jsonResponse = new JSONObject(response);
+            JSONArray resp = jsonResponse.getJSONArray("results");
+            JSONObject results = resp.getJSONObject(0);
+            String altitude = results.getString("elevation");
+            altitudeArray.put(altitude);
+        }
+        return altitudeArray.toString();
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        scheduler.shutdown();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        scheduler.shutdown();
+        super.onBackPressed();
+    }
+
+    @Override
+    public void onResume()
+    {
+        markDronePosition();
+        super.onResume();
     }
 }
-
