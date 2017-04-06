@@ -1,15 +1,16 @@
 package com.example.karthik.dronsample;
 
 import android.Manifest;
-import android.content.Intent;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
@@ -58,6 +59,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LocationRequest mLocationRequest;
     ArrayList<LatLng> markerPoints;
     private Button submitBtn;
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +72,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         submitBtn = (Button) findViewById(R.id.btn_map);
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
-            String json = "{\"ACTION\":\"\", \"MAP\":";
+
+            /*String json = "{\"ACTION\":\"\", \"MAP\":";
             String message = "Coordinates sent";
             String[] myParams = {MainActivity.url, json, message};
             @Override
             public void onClick(View v) {
                 new PostResponseToServer().execute(myParams);
                 finish();
+            }*/
+
+            @Override
+            public void onClick(View arg0) {
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.altitude_coordinates_popup);
+                Button dialogButton = (Button) dialog.findViewById(R.id.btn_ok);
+
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    String json = "{\"ACTION\":\"\", \"MAP\":";
+                    String message = "Coordinates sent";
+                    String[] myParams = {MainActivity.url, json, message};
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        new PostResponseToServer().execute(myParams);
+                        finish();
+
+                    }
+                });
+                dialog.show();
             }
         });
     }
